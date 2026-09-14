@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy - Fathom Pulse</title>
+<meta name="description" content="What Fathom Pulse does and does not collect: local-only storage, AdMob, Play Billing, Firebase Remote Config/Analytics, and the optional Slack integration's own data practices, and permissions." />
+<link rel="canonical" href="https://fathompulse.app/privacy.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Fathom Pulse" />
+<meta property="og:url" content="https://fathompulse.app/privacy.html" />
+<meta property="og:title" content="Privacy Policy - Fathom Pulse" />
+<meta property="og:description" content="What Fathom Pulse does and does not collect: local-only storage, AdMob, Play Billing, Firebase Remote Config/Analytics, and the optional Slack integration's own data practices, and permissions." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Privacy Policy - Fathom Pulse" />
+<meta name="twitter:description" content="What Fathom Pulse does and does not collect: local-only storage, AdMob, Play Billing, Firebase Remote Config/Analytics, and the optional Slack integration's own data practices, and permissions." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 108 108%22><rect width=%22108%22 height=%22108%22 rx=%2222%22 fill=%22%231b4965%22/><path d=%22M20 54 L38 54 L46 30 L58 78 L66 54 L88 54%22 fill=%22none%22 stroke=%22%23cae9ff%22 stroke-width=%226%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark">
+        <svg viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 54 L38 54 L46 30 L58 78 L66 54 L88 54" stroke="#cae9ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+      Fathom Pulse
+    </a>
+    <nav class="primary">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://play.google.com/store/apps/details?id=com.fathom.pulse">Get it on Google Play</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap legal" style="max-width: 780px;">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: [FILL IN DATE ON PUBLISH]</p>
+
+    <p>
+      Fathom Pulse ("Fathom", "the app", "we") is developed by Steadyline Labs. This
+      policy explains what data the app collects, what it doesn't, and how the third-party
+      services it uses (Google Play Billing, Google AdMob, and Firebase) handle data on our behalf.
+    </p>
+
+    <div class="callout">
+      The short version: Fathom has no account system and no backend server of its own. The
+      Postman collections, environments, and test results you work with are stored only in
+      local storage on your device. The only network requests Fathom makes on your behalf are
+      the actual HTTP calls your collection defines - sent straight to the URLs you configured,
+      never to us.
+    </div>
+
+    <h2>1. Data stored locally, on your device only</h2>
+    <p>The app stores the following in local, on-device storage, never transmitted to us:</p>
+    <ul>
+      <li>Imported Postman collections and environments (requests, headers, bodies, scripts, variables)</li>
+      <li>Saved run configurations (which preset/settings you last used for a collection)</li>
+      <li>Test run results (latency, throughput, error rates, timestamps)</li>
+      <li>Dashboard pins and their auto-check preferences</li>
+    </ul>
+    <p>
+      Uninstalling the app, or clearing its storage from Android's Settings app, permanently
+      deletes all of this. We have no copy of it anywhere else, because we never received it.
+    </p>
+
+    <h2>2. Network requests your collection defines</h2>
+    <p>
+      When you run a test, Fathom sends real HTTP(S) requests to whatever URLs your collection
+      specifies - these go directly from your device to the target server you configured, not
+      through any server of ours. You are responsible for those targets being ones you own or
+      are authorized to test; see the <a href="terms.html">Terms of Service</a>.
+    </p>
+
+    <h2>3. Permissions</h2>
+    <table>
+      <tr><th>Permission</th><th>Why</th></tr>
+      <tr><td>Internet / network state</td><td>To run the load tests your collections define, and to check your device's network type before sizing a load preset.</td></tr>
+      <tr><td>Notifications (Android 13+)</td><td>Only requested the first time you turn on periodic auto-check for a pinned flow - used solely to alert you if that flow starts failing.</td></tr>
+    </table>
+    <p>Fathom does not request location, contacts, camera, microphone, or storage-wide access.</p>
+
+    <h2>4. Advertising (AdMob)</h2>
+    <p>
+      Free and Plus both show ads served by Google AdMob - a banner on the dashboard, and an
+      interstitial (full-screen) ad after a test run finishes, at most once every few minutes.
+      AdMob may collect device identifiers (such as your advertising ID), IP address, and
+      general device information to serve and measure ads, and may use this data for ad
+      personalization depending on your region and settings. We do not receive or store this
+      data ourselves - it is handled directly between your device and Google. See
+      <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's ad policy</a>
+      and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>
+      for detail. If you're in the EEA, UK, or another region where it applies, Google's own
+      consent form (via Google's User Messaging Platform) appears before any ad is requested,
+      letting you choose whether ads are personalized; declining doesn't block the app, it only
+      affects which ads are shown. Upgrading to Pro removes ads entirely.
+    </p>
+
+    <h2>5. Payments (Google Play Billing)</h2>
+    <p>
+      The Plus and Pro subscriptions are billed and managed entirely through Google Play. We
+      never see or store your payment card details - Google handles the transaction, and Play's
+      own privacy policy governs that data. We only receive confirmation of which subscription,
+      if any, is active, so the app can unlock the matching features.
+    </p>
+
+    <h2>6. Remote configuration (Firebase Remote Config)</h2>
+    <p>
+      Certain free-tier limits (how many past test runs are kept, how many flows you can pin to
+      the dashboard) are controlled through Firebase Remote Config, so they can be adjusted
+      without shipping an app update. This uses Firebase's Installations service, which assigns
+      your app install an anonymous installation identifier - handled directly between your
+      device and Google, we never see or store it ourselves. It has no access to, and never
+      transmits, any of your collections, environments, or test results.
+    </p>
+
+    <h2>7. Analytics (Firebase Analytics)</h2>
+    <p>
+      We use Firebase Analytics (Google) to understand basic usage of the app - such as how many
+      people open it and which features are used - so we can find problems and improve it. This
+      is handled directly between your device and Google via the same Firebase Installations
+      identifier described in section 6. It's not linked to your name or other personally
+      identifiable information, and never includes the collections, environments, or test
+      results you work with - only that a feature was used, not its content.
+    </p>
+
+    <h2>8. Slack integration (Pro, optional)</h2>
+    <p>
+      If you're on Pro and choose to configure a Slack Incoming Webhook, Fathom sends test
+      summaries there - directly from your device to the webhook URL you entered, never through
+      a server of ours. Each message includes only the run's label, verdict, and metrics
+      (throughput, latency, error rate) and the weakest endpoint's name - never the actual
+      request URLs, headers, bodies, or scripts in your collection. This is entirely opt-in:
+      nothing is sent to Slack unless you add a webhook URL yourself, and Slack's own privacy
+      policy governs the data once it reaches your workspace. Because the same webhook URL can
+      be shared across several people's devices, each message also carries a sender label - your
+      device's model name by default, or a custom name you choose to set instead - so your team
+      can tell which device a message came from.
+    </p>
+
+    <h2>9. Backup and restore</h2>
+    <p>
+      Two separate mechanisms, both keep data within your own Google account, never a server of
+      ours. First, Android's own Auto Backup: if it's turned on for your device (Settings >
+      System > Backup), your collections, environments, templates, dashboard pins, past run
+      results, and app settings are periodically copied to a private, hidden area of your Google
+      account and restored automatically on reinstall or a new device signed into the same
+      account - entirely Android's own mechanism, no Google sign-in inside this app, and it's
+      invisible in your normal Drive file list. Second, "Export data"/"Import data" in Settings: a
+      plain file you choose where to save (or open from) yourself, using Android's own file picker
+      - nothing is uploaded anywhere unless you choose to save it somewhere that does, and this
+      file doesn't include past run results, only your collections, environments, templates,
+      dashboard pins, and settings. Neither mechanism includes your subscription status (Google
+      Play restores your subscription on its own). If you've configured a Slack webhook (section
+      8), that URL is included in Auto Backup's "app settings" like any other setting - restored
+      the same way, within your own Google account, never a server of ours.
+    </p>
+
+    <h2>10. PDF reports</h2>
+    <p>
+      For a Load Test result on Plus or Pro, "Share result" builds a PDF (verdict, charts,
+      and the device's specs - CPU cores, RAM, network type) on your device and hands it to
+      Android's own share sheet, so you pick whichever app you want to send it through - we
+      never see the report or the device details in it. Below Plus, or for a Sanity Check,
+      the same button shares a plain text summary instead. Nothing happens unless you tap
+      this yourself.
+    </p>
+
+    <h2>11. What we don't do</h2>
+    <ul>
+      <li>We don't require an account, login, or any personal identifier to use the app.</li>
+      <li>We don't run our own crash-reporting SDK. Firebase Analytics (section 7) only sees basic usage, never your collections, environments, or test results.</li>
+      <li>We don't sell or share your collection/environment/result data - we never have it to begin with.</li>
+    </ul>
+
+    <h2>12. Children's privacy</h2>
+    <p>Fathom Pulse is a developer/IT tool not directed at children, and we do not knowingly collect data from children under 13 (or the relevant age in your region).</p>
+
+    <h2>13. Changes to this policy</h2>
+    <p>If this policy changes, we'll update the date at the top of this page. Continued use of the app after a change means you accept the updated policy.</p>
+
+    <h2>14. Contact</h2>
+    <p>Questions about this policy: <a href="mailto:contact@fathompulse.app">contact@fathompulse.app</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="copyright">© 2026 Fathom Pulse. All rights reserved.</div>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
