@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>You're on the list - Fathom Pulse</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 108 108%22><rect width=%22108%22 height=%22108%22 rx=%2222%22 fill=%22%231b4965%22/><path d=%22M20 54 L38 54 L46 30 L58 78 L66 54 L88 54%22 fill=%22none%22 stroke=%22%23cae9ff%22 stroke-width=%226%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>" />
+<style>
+  :root {
+    --brand: #1b4965;
+    --accent: #5fa8d3;
+    --accent-soft: #cae9ff;
+    --bg: #fbfbfe;
+    --surface: #ffffff;
+    --border: #e2e6ee;
+    --text: #16202a;
+    --text-muted: #56626f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1520;
+      --surface: #141d29;
+      --border: #263140;
+      --text: #eaf0f6;
+      --text-muted: #9aa8b6;
+      --accent: #7cbde0;
+      --accent-soft: #234258;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 24px;
+  }
+  .card {
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+  }
+  .mark {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: var(--brand);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .mark svg { width: 34px; height: 34px; }
+  h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+  p.lead {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 36px;
+  }
+  .back-link {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background: var(--brand);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 28px;
+  }
+  .back-link:hover { opacity: 0.92; }
+  .footer {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .footer a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <span class="mark">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 13l4 4L19 7" stroke="#cae9ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </span>
+  <h1>You're on the list.</h1>
+  <p class="lead">We'll email you the moment Fathom Pulse is live, nothing else in the meantime.</p>
+
+  <a class="back-link" href="/">Back to Fathom Pulse</a>
+
+  <div class="footer">
+    Questions? <a href="mailto:contact@fathompulse.app">contact@fathompulse.app</a>
+  </div>
+</div>
+
+</body>
+</html>

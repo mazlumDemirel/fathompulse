@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fathom Pulse - Coming soon</title>
+<meta name="description" content="Fathom Pulse: turn any Postman collection into a real load test and a live health pulse, right from your phone. Launching soon." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 108 108%22><rect width=%22108%22 height=%22108%22 rx=%2222%22 fill=%22%231b4965%22/><path d=%22M20 54 L38 54 L46 30 L58 78 L66 54 L88 54%22 fill=%22none%22 stroke=%22%23cae9ff%22 stroke-width=%226%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>" />
+<style>
+  :root {
+    --brand: #1b4965;
+    --accent: #5fa8d3;
+    --accent-soft: #cae9ff;
+    --bg: #fbfbfe;
+    --surface: #ffffff;
+    --border: #e2e6ee;
+    --text: #16202a;
+    --text-muted: #56626f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1520;
+      --surface: #141d29;
+      --border: #263140;
+      --text: #eaf0f6;
+      --text-muted: #9aa8b6;
+      --accent: #7cbde0;
+      --accent-soft: #234258;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 24px;
+  }
+  .card {
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+  }
+  .mark {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: var(--brand);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .mark svg { width: 34px; height: 34px; }
+  h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+  p.lead {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 36px;
+  }
+  .countdown {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .unit {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 4px;
+    width: 70px;
+  }
+  .unit .num {
+    font-size: 26px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--brand);
+  }
+  @media (prefers-color-scheme: dark) {
+    .unit .num { color: var(--accent); }
+  }
+  .unit .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+  .footer {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .footer a { color: var(--text-muted); }
+  .waitlist {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .waitlist input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 15px;
+    font-family: inherit;
+  }
+  .waitlist input[type="email"]:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+  .waitlist button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background: var(--brand);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .waitlist button:hover { opacity: 0.92; }
+  .waitlist-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: -12px 0 28px;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <span class="mark">
+    <svg viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 54 L38 54 L46 30 L58 78 L66 54 L88 54" stroke="#cae9ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </span>
+  <h1>Fathom Pulse is almost here.</h1>
+  <p class="lead">A real load test and a live health pulse for any API, right from your phone. Launching soon.</p>
+
+  <div class="countdown" id="countdown">
+    <div class="unit"><div class="num" id="cd-days">-</div><div class="label">Days</div></div>
+    <div class="unit"><div class="num" id="cd-hours">-</div><div class="label">Hrs</div></div>
+    <div class="unit"><div class="num" id="cd-mins">-</div><div class="label">Min</div></div>
+    <div class="unit"><div class="num" id="cd-secs">-</div><div class="label">Sec</div></div>
+  </div>
+
+  <form class="waitlist" id="waitlistForm" action="https://formspree.io/f/mnpndppr" method="POST">
+    <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address" />
+    <input type="hidden" name="_subject" value="New Fathom Pulse waitlist signup" />
+    <button type="submit">Notify me</button>
+  </form>
+  <p class="waitlist-note" id="waitlistNote">No spam, just a launch-day email.</p>
+
+  <div class="footer">
+    Questions? <a href="mailto:contact@fathompulse.app">contact@fathompulse.app</a>
+  </div>
+</div>
+
+<script>
+  var LAUNCH = new Date("2026-10-29T12:00:00Z").getTime();
+
+  function tick() {
+    var now = Date.now();
+    var diff = Math.max(0, LAUNCH - now);
+    var days = Math.floor(diff / 86400000);
+    var hours = Math.floor((diff % 86400000) / 3600000);
+    var mins = Math.floor((diff % 3600000) / 60000);
+    var secs = Math.floor((diff % 60000) / 1000);
+    document.getElementById("cd-days").textContent = days;
+    document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("cd-mins").textContent = String(mins).padStart(2, "0");
+    document.getElementById("cd-secs").textContent = String(secs).padStart(2, "0");
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // Free Formspree plans don't support the server-side _next redirect, so
+  // submit via fetch and redirect client-side instead once it succeeds.
+  var form = document.getElementById("waitlistForm");
+  var note = document.getElementById("waitlistNote");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+    var submitBtn = form.querySelector("button");
+    submitBtn.disabled = true;
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    })
+      .then(function (res) {
+        if (res.ok) {
+          window.location.href = "/thanks.html";
+        } else {
+          submitBtn.disabled = false;
+          note.textContent = "Something went wrong, try again in a moment.";
+        }
+      })
+      .catch(function () {
+        submitBtn.disabled = false;
+        note.textContent = "Something went wrong, try again in a moment.";
+      });
+  });
+</script>
+
+</body>
+</html>
